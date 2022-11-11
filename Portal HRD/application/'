@@ -1,0 +1,91 @@
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Pola_kerja_model extends MY_Model {
+	
+	protected $_table_name = 'pola_kerja';
+	protected $_primary_key = 'id_polker';
+	protected $_order_by = 'id_polker';
+	protected $_order_by_type = 'ASC';
+//*
+	public $rules = array(
+		'pola_kerja' => array(
+            'field' => 'pola_kerja',
+            'label' => 'Nama Pola Kerja',
+            'rules' => 'trim|required'
+		),
+		'toleransi' => array(
+		'field' => 'toleransi',
+		'label' => 'Toleransi Keterlambatan',
+		'rules' => 'optional'
+		),
+		'hari' => array(
+                'field' => 'hari',
+                'label' => 'Hari',
+                'rules' => 'required'
+                ),
+		'status_hari' => array(
+                'field' => 'status_hari',
+                'label' => 'Status Hari',
+                'rules' => 'required'
+                ),
+                'jam_masuk' => array(
+                'field' => 'jam_masuk',
+                'label' => 'Jam Masuk Kerja',
+	        'rules' => 'required'
+                ),
+                'jam_pulang' => array(
+                'field' => 'jam_pulang',
+                'label' => 'Jam Pulang Kerja',
+                'rules' => 'required'
+                ),
+	);	
+//*/
+	
+	function __construct() {
+		parent::__construct();
+	}	
+	
+	function insertPolaKerja($dataA){
+		$lastID = $this->db->insert('pola_kerja', $dataA);
+		return $lastID;
+	}
+	
+	function insertPolaHari($dataB){
+		$this->db->insert('pola_kerja_hari', $dataB);
+	}
+	
+	function getListData(){
+		//$polaKerja = array();
+		$perusahaanID = $this->session->userdata('perusahaan_ID');
+		$this->db->where('perusahaan_ID', $perusahaanID);
+		$query = $this->db->get('pola_kerja_hari');
+		foreach ($query->result_array() as $key) {
+			$this->db->from('pola kerja_hari');
+			$this->db->where('id_polker', $key['id_polker']);
+			$query = $this->db->get();
+	                $totalHari = $query->num_rows();
+			
+			$this->db->from('pola_kerja_hari');
+                        $this->db->where('id_polker', $key['id_polker']);
+			$this->db->where('jenis_hari LIKE "Kerja"');
+                        $query = $this->db->get();
+                        $totalHariKerja = $query->num_rows();
+
+			$this->db->from('pola_kerja_hari');
+                        $this->db->where('id_polker', $key['id_polker']);
+			$this->db->where('jenis_hari LIKE "Libur"');
+                        $query = $this->db->get();
+                        $totalHariLibur = $query->num_rows();
+
+			$polaKerja[] = array(
+				'nama_polker' => $key['nama_polker'],
+				'totalHari' => $totalHari,
+				'totalHariKerja' => $totalHariKerja,
+				'totalHariLibur' => $totalHariLibur
+			);
+		}
+		return $polaKerja;
+	}
+}

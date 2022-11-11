@@ -1,0 +1,2737 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Gadjian</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="google" value="notranslate">
+<link rel="shortcut icon" href="/static/images/favicon2015061801.png" type="image/png">
+
+	<!-- Mengganti halaman ketika user menonaktifkan javascript -->
+		<noscript>
+	        <style>html{display:none;}</style>
+	        <meta http-equiv="refresh" content="0.0;url=/guest/error-page">
+	    </noscript>
+
+
+<!-- Start CSS Code -->
+	<link href='/static/css/fullcalendar.css' rel='stylesheet' />
+	<link href='/static/css/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<link type="text/css" rel="stylesheet" href="/static/css/jasny-bootstrap.css" />
+	<link type="text/css" rel="stylesheet" href="/static/css/jquery.dataTables.min.css" />
+	<link type="text/css" rel="stylesheet" href="/static/js/plugin/bootstrap-datepicker-master/dist/css/bootstrap-datepicker.min.css" />
+	<!-- <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all"> -->
+	<link href="/static/css/userGadjian.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/static/css/main03042017.css?version=1.2" rel="stylesheet" type="text/css" media="all">
+	<link href="/static/css/norman16112016.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/static/css/bootstrap-formhelpers.min.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/static/css/chosen.min.css" type="text/css" rel="stylesheet" />
+	<link href="/static/js/plugin/footable_v3/css/footable.bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+	<style type="text/css">
+		.contact_gadjian{
+			cursor:pointer;
+		}
+		.bintang {
+			font-size: 12pt !important;
+			font-weight: bold;
+		}
+			#ubahNote{
+				display:none;
+			}
+			button i{
+				margin-right:0px;
+			}
+			.btnCheck,.btnYesAction{
+				border-radius:0px;
+				/*border-color:#019BD7;*/
+				background:#FA7252;
+				color:white;
+				border-color:#FA7252;
+				padding:0px;
+				width:35px;
+				height:35px;
+			}
+			#page-content .btnCheck i,#page-content .btnYesAction i{
+				font-size:1.33333em !important;
+			}
+			.btnCheck:hover,.btnCheck:focus,.btnYesAction:hover,.btnYesAction:focus{
+				/*border-color:#019BD7;*/
+				background:#FA7252;
+				border-color:#FA7252;
+				color:white !important;
+			}
+			.btnCheck.inActive,.btnYesAction.inActive{
+				background:#E9E9E9;
+				color:#D9D9D9 !important;
+				border-color:#E9E9E9;
+			}
+			.btnCheck.inActive:hover,.btnCheck.inActive:focus,.btnYesAction.inActive:hover,.btnYesAction.inActive:focus{
+				border-color:#E9E9E9;
+				color:#D9D9D9 !important;
+			}
+
+			.fotoAbsensi{
+				width:50px;
+			}
+			.media-body{
+				width:auto;
+			}
+			thead .checkbox{
+				margin-top:0px;
+				margin-bottom:0px;
+			}
+			thead .checkbox label{
+				min-height:15px;
+			}
+			#dashboard .table-responsive{
+				margin-top:0px !important;
+			}
+			.modal .modal-content{
+				background:white;
+			}
+			/*.modal .modal-content .modal-body input:last-child, .modal .modal-content .modal-body select{
+				margin-top:0px !important;
+			}*/
+			.noteAction .checkbox{
+				display:none;
+			}
+			.note{
+				margin-left:5px;
+				font-size:10px !important;
+				background:#FAFAFA;
+				/*border:1px solid #E0E0E0;*/
+				border:1px solid #838383;
+				/*color:#1AC6C4;*/
+				/*color:#E0E0E0;*/
+				color:#838383;
+				/*display:none;*/
+				width:35px !important;
+				height:35px !important;
+				border-radius:100%;
+				padding:0px;
+			}
+			.note:hover,.note:focus{
+				cursor:pointer;
+				/*color:#E0E0E0;*/
+				color:#838383;
+			}
+			.adaIsi{
+				background:#1AC6C4;
+				color:#FAFAFA;
+				border-color:#1AC6C4;
+			}
+			.adaIsi:hover,.adaIsi:focus{
+				color:#FAFAFA !important;
+			}
+			.panel .bfh-timepicker{
+				width:65px;
+				background:#fff;
+				/*position:absolute;*/
+			}
+			/*.panel .bfh-timepicker input{
+				border-radius:4px !important;
+			}*/
+			.panel .bfh-timepicker-toggle > .input-group-addon{
+				display:none;
+			}
+			.tp-container{
+				position:relative !important;
+			}
+			.absensiPersonalia .table-responsive{
+				padding-bottom:100px;
+			}
+			/*.bfh-timepicker-popover{
+				position:static !important;
+			}*/
+			.hiddenInput{
+				display:none;
+			}
+			#allAction{
+				display:none;
+				margin-bottom:20px;
+			}
+			#allAction .control-label{
+				text-align:left !important;
+			}
+
+			.today{
+				background:#1AC6C4 !important;
+				color:white;
+			}
+			#page-content .navigasiTanggal i{
+				font-size:16px !important;
+			}
+			.fa-angle-double-up,.fa-angle-double-down{
+				display:none;
+			}
+			.navWeekRange{
+				width:185px !important;
+			}
+			/*.datepicker{
+				z-index:1910 !important;
+			}*/
+
+			@media screen and (min-width:992px){
+				.daftarTanggal .tanggal .col-xs-1{
+					/*width:9.09090909091% !important;*/
+					width:11.10990909091% !important;
+				}
+			}
+			@media screen and (max-width:992px){
+				#userMenuHome .statistikAkun{
+					padding-bottom:20px;
+				}
+				.legendContainer{
+					text-align:center;
+					padding-top:20px;
+				}
+				#js-legend{
+					display:inline-block;
+					margin:auto !important;
+				}
+
+				#hadirHariIni{
+					margin-top:20px;
+				}
+
+				.daftarTanggal .tanggal .col-xs-1{
+					width:100% !important;
+					border-left:0px;
+				}
+				.daftarTanggal .selanjutnya{
+					/*float:none !important;*/
+				}
+				.daftarTanggal .tanggal .col-xs-1:last-child{
+					border-bottom:0px;
+				}
+				.daftarTanggal .tanggal .col-xs-1:first-child,
+				.daftarTanggal .tanggal .col-xs-1:nth-child(2),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(3),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(4),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(5),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(7),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(8),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(9),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(10),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(11){
+					display:none;
+				}
+				#navbar>ul.nav:nth-child(1){
+					display: none;
+				}
+				.show_menu_fav li a{
+					margin-top: 0;
+				}
+				.menu_fav{
+					display: none !important;
+				}
+				/*.daftarTanggal .tanggal .col-xs-1:first-child,
+				.daftarTanggal .tanggal .col-xs-1:nth-child(2),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(3),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(4),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(8),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(9),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(10),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(11){
+					width:25% !important;
+				}
+				.daftarTanggal .tanggal .col-xs-1:nth-child(5),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(6),
+				.daftarTanggal .tanggal .col-xs-1:nth-child(7){
+					width:100% !important;
+				}*/
+			}
+			.jadwalKerja{
+				display:none;
+			}
+			.hasilStatusKehadiran:hover{
+				cursor:pointer;
+			}
+			.table .media{
+				margin-top:5px;
+				margin-bottom:5px;
+			}
+			/*#dashboard a.hasilStatusKehadiran,#dashboard table a{*/
+			#dashboard a.hasilStatusKehadiran{
+				color:black !important;
+				text-decoration: underline !important;
+			}
+
+			.btnUbahStatus .status-kehadiran{
+				width:80px;
+				margin-left:5px;
+				margin-right:5px;
+			}
+			.btnUbahStatus .prev, table .next{
+				width:10px;
+				display:inline;
+			}
+
+			#page-content i.fa-2x{
+				font-size:2em !important;
+			}
+
+			.btnUbahStatus{
+				width:110px;
+			}
+			.btnActionTerlambat{
+				width:80px;
+			}
+
+			.presentase{
+				width:20%;
+			}
+			.jumlahPresentase{
+				width:10%;
+			}
+
+			/*Start Padding Collection*/
+			.pd-t-0{
+				padding-top:0px !important;
+			}
+			.pd-t-1{
+				padding-top:30px !important;
+			}
+			.pd-b-0{
+				padding-bottom:0px !important;
+			}
+			.pd-b-1{
+				padding-bottom:30px !important;
+			}
+			/*End Padding Collection*/
+
+			/*Start Padding Collection*/
+			.mg-t-0{
+				margin-top:0px !important;
+			}
+			.mg-t-1{
+				margin-top:30px !important;
+			}
+			.mg-t-2{
+				margin-top:20px !important;
+			}
+			.mg-b-0{
+				margin-bottom:0px !important;
+			}
+			.mg-b-1{
+				margin-bottom:20px !important;
+			}
+
+
+			.m-t-0{
+				margin-top:0px !important;
+			}
+			.m-t-1{
+				margin-top:10px !important;
+			}
+			.m-t-3{
+				margin-top:30px !important;
+			}
+			.m-t-2{
+				margin-top:20px !important;
+			}
+			.m-b-0{
+				margin-bottom:0px !important;
+			}
+			.m-b-1{
+				margin-bottom:10px !important;
+			}
+			.m-b-2{
+				margin-bottom:20px !important;
+			}
+			.m-b-3{
+				margin-bottom:30px !important;
+			}
+
+			.p-t-0{
+				padding-top:0px !important;
+			}
+			.p-t-1{
+				padding-top:10px !important;
+			}
+			.p-t-3{
+				padding-top:30px !important;
+			}
+			.p-t-2{
+				padding-top:20px !important;
+			}
+			.p-b-0{
+				padding-bottom:0px !important;
+			}
+			.p-b-1{
+				padding-bottom:10px !important;
+			}
+			.p-b-2{
+				padding-bottom:20px !important;
+			}
+			.p-b-3{
+				padding-bottom:30px !important;
+			}
+			/*End Padding Collection*/
+
+			.absensiNama{
+				width:150px;
+			}
+			#dashboard table .link-group a{
+				color:#929292 !important;
+				text-decoration: none !important;
+			}
+			#kasbonLangsung input[type="number"]::-webkit-outer-spin-button,
+			#kasbonLangsung input[type="number"]::-webkit-inner-spin-button,
+			#bayarLangsung input[type="number"]::-webkit-outer-spin-button,
+			#bayarLangsung input[type="number"]::-webkit-inner-spin-button {
+			    -webkit-appearance: none;
+			    margin: 0;
+			}
+			#kasbonLangsung input[type="number"],
+			#kasbonLangsung input[type="number"],
+			#bayarLangsung input[type="number"],
+			#bayarLangsung input[type="number"] {
+			    -moz-appearance: textfield;
+			}
+			#dashboard .plaineditGadjian.editAlone{
+				position:relative !important;
+				margin-bottom:0px !important;
+			}
+			#modalSlipGaji .modal-lg {
+				width: 90%
+			}
+			.panel{
+				border-radius:0px !important;
+			}
+
+			#xbtnSimpanEdit,#ubahGrupGaji{
+				display:none;
+			}
+
+			.inline-i{
+				display:inline !important;
+			}
+
+			#page-content i.judulAsing{
+				font-size:18px !important;
+			}
+
+			#userMenuHome li{
+				cursor:pointer !important;
+			}
+
+			.modulContainer ul{
+				padding-left:0px !important;
+			}
+
+			.input-group.date .form-control{
+				background:#fff;
+			}
+			.statusPersonaliaImg{
+				width:20px;
+				height:20px;
+				position:absolute;
+				left:0;
+				margin-left:102px;
+				margin-top:-5px;
+			}
+
+			table.footable > tbody > tr.footable-empty > td{
+				font-size:13px !important;
+				font-style:italic;
+			}
+			.footable-filtering{
+				background:none !important;
+			}
+
+			/*#dashboard .statusbagianContainer.aktifkanRev button{
+				background:#b0b0b0 !important;
+				color:white !important;
+			}*/
+			.statusPembayaran {
+				display: inline-block;
+				margin: auto;
+				width: auto !important;
+				height: 32px;
+				border-radius: 2px;
+				font-family: latoregular;
+				box-sizing: border-box;
+			}
+
+			.statusPembayaran button{
+				float: right;
+				height: 32px;
+				margin-top: -1px;
+				margin-right: -1px;
+			}
+
+			.statusPembayaran .btn-default:hover {
+				background: #fff;
+				border-color: #ccc;
+			}
+
+			#dashboard .lihat-data-personalia .btn-default.active, .statusPembayaran .active .btn-default:hover {
+				background: #23C7C6 !important;
+				color: #F3F0E7 !important;
+			}
+			.tableRows{
+				min-width:100px;
+			}
+
+			/*Agar tombol plus dan gambar di tabel dapat sejajar*/
+			/*.footable-toggle{
+				vertical-align:top;
+			}
+			table .media{
+				display:inline-block;
+			}*/
+
+			.footable-toggle{
+				cursor:pointer;
+			}
+
+			#simpanPengaturan{
+				margin-top:100px;
+			}
+			.navigasiTanggal.disabled{
+				color:black !important;
+			}
+
+			.lihat-data-personalia .panel{
+				margin-bottom:0px !important;
+			}
+
+			#dashboard #wrapper #page-content label{
+				font-family:latoregular !important;
+			}
+
+			select{
+				padding-right:30px !important;
+			}
+
+			#jengkiError{
+				display:none;
+			}
+			#adminMenu .statistikAkun{
+				margin-left:-10px;
+			}
+			#adminMenu #adminMenuCtrl{
+				margin-left: -60px;
+			}
+			#adminMenu .sub-menu{
+				padding-left: 0px;
+			}
+			#userMenuHome .sub-menu{
+				padding-left: 15px;
+			}
+			#userMenuHome .sub-menu li{
+				padding-right: 15px;
+			}
+			#adminMenu .sub-menu a,#userMenuHome .sub-menu a{
+				padding-left: 30px !important;
+			}
+			#adminMenu a{
+				cursor:pointer;
+			}
+			.statistikAkun a,#adminMenu .statistikAkun a{
+				cursor:default;
+			}
+			#modalPreview .modal-body{
+				overflow-x: auto !important;
+			}
+
+			.v-center{
+				vertical-align: middle !important;
+			}
+			#dashboard .dashboard_page .modal-body a.textDark{
+				color:#555 !important;
+			}
+			#dashboard .dashboard_page .modal-body a.textDark:hover{
+				color:#000 !important;
+			}
+
+			.defaultCursor{
+				cursor:default !important;
+			}
+
+			#dashboard .user .panel-body{
+				background:#f8f8f8;
+				padding-bottom:30px;
+			}
+			.panel-footer{
+				background:#ededed;
+			}
+			#dashboard .cs .panel-body{
+				background:#f8f8f8;
+				padding-bottom:30px;
+			}
+
+			.btn-warning.disabled{
+				background:#f3f0e7;
+				color:#AD9F9F !important;
+			}
+
+			#pengaturan_akun a{
+				cursor:pointer !important;
+			}
+
+			#adminMenu .active a{
+		    background: #F3F0E7 !important;
+			}
+
+			.bgYellow{
+				background:yellow !important;
+			}
+			.colorPink{
+				color:pink !important;
+			}
+
+			/*.modal-backdrop{
+				position:absolute !important;
+			}
+			.modal-backdrop.in{
+				height:100% !important;
+			}*/
+			.modal-backdrop{
+				z-index:9989;
+			}
+			#adminMenu{
+				z-index:9970 !important;
+			}
+			.modal-open{
+				overflow-y:hidden !important;
+			}
+			.modal-open .modal{
+				overflow-y:auto !important;
+			}
+			.td-right { text-align: right; }
+
+			.bgSakit{
+				background:#20bdc2 !important;
+				color:white !important;
+			}
+			.bgIzin{
+				background:#168e8c !important;
+				color:white !important;
+			}
+			.bgCuti{
+				background:#bab4ae !important;
+				color:white !important;
+			}
+			.bgUnpaidLeave{
+				background:#8c8c8c !important;
+				color:white !important;
+			}
+			.sesi-atas{
+				margin-top:0px !important;
+			}
+			.sesi-atas,.waktu-atas{
+				font-size:11px !important;
+			}
+			.p-v-n-i{
+				padding-top:0px !important;
+				padding-bottom:0px !important;
+			}
+
+			.btn-group .btn-warning:active:focus {
+			    border: 1px solid #fff !important;
+			}
+
+			.modal-konfirmasi .modal-body > .row > .col-xs-12 {
+			    border-top: 0px;
+			    /*padding-top: 0px !important;*/
+			}
+
+			.btn-grey {
+			    background: #EBE4D4;
+			    color: #484848;
+			    border: none;
+			}
+			.btn-grey:active, .btn-grey:focus, .btn-grey:hover {
+			    background: #b0b0b0!important;
+			    color: #F3F0E7!important;
+			}
+			.logoMandiri {
+			    height: 40px;
+			    margin-left: 18px;
+			}
+			.manual{
+				padding-left:17px !important;
+			}
+			.link-group a{
+				cursor:pointer !important;
+			}
+			.pad-p-cal {
+				display: inline-block;
+			}
+			.b-red {
+				padding: 5px;
+				background: red;
+				color: #fff;
+			}
+			#dashboard .dashboard_page .modal-body a.chosen-single {
+				color: #555 !important;
+			}
+
+			.bottom .tooltip-arrow{
+				border-bottom-color:#ffdf60 !important;
+			}
+			footer{
+				margin-top:100px;
+			}
+			.bg-n{
+				background:none !important;
+			}
+			.b-n-i{
+				border:0px !important;
+			}
+			.a-block{
+				display:block;
+			}
+			.p-n-i{
+				padding:0px !important;
+			}
+			.menu_fav {
+				position: fixed;
+				z-index: 1000;
+				background: #fff;
+				width: 100%;
+				display: none;
+				padding: 25px 0px 0px 0px;
+				box-shadow: 0 2px 25px -8px #000;
+				margin-top:-20px;
+			}
+			.menu_fav ul li{
+				padding: 10px;
+				border: 1px solid #ebe4d4;
+				margin-bottom: 4px;
+			}
+			.show_menu_fav{
+				padding-top: 15px !important;
+			}
+			.show_menu_fav li{
+				border-right: none;
+			}
+			.show_menu_fav li a{
+				display: inline;
+			}
+			#dashboard .navbar #navbar span{
+	    		padding: 2px 4px;
+				background: #FA7252;
+				border-radius: 5px !important;
+				color: #fff;
+				margin-top: -10px;
+				margin-left: 2px !important;
+				position: static !important;
+				font-size: 11px !important;
+			}
+			#dashboard .navbar #navbar span.fa-thumb-tack{
+				font-size: 20px !important;
+			}
+			.column_menuFav{
+		        /* column-width: 200px; */
+		        display: block;
+		        -webkit-column-width: 200px;
+				-moz-column-width: 200px;
+		        /* -webkit-column-count:5; */
+		    }
+		    #menu_fav_container{
+				max-height: 410px;
+				overflow-x: hidden;
+				overflow-y: auto;
+		    }
+		    @-moz-document url-prefix() {
+				.column_menuFav > label{
+				display: block;
+				}
+		    }
+			.column_menuFav > label{
+				/*display: block;*/
+				cursor: pointer;
+		        -webkit-column-width: 200px;
+		        margin-bottom: 0;
+		        overflow:auto;
+			}
+			.column_menuFav .col-lg-2{
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+			.menu_fav_terpilih{
+				background: #00C2BE;
+				color: #fff;
+				border-color: #00C2BE!important;
+			}
+			.menu_nav_disable, .menu_fav_kadaluarsa{
+				background: #f6f2eb;
+				color: #d4cfc8;
+				cursor: not-allowed;
+			}
+			#dashboard .navbar #navbar span{
+				background: #00C2BE!important;
+			}
+			#dashboard .navbar #navbar .label-disabled{
+				background: #F6F2EB!important;
+				color: #d4cfc8 !important;
+				cursor: not-allowed;
+			}
+
+		    @-moz-document url-prefix() {
+
+		    }
+			@media screen and (max-width: 1220px){
+				#navbar>ul.nav:nth-child(1){
+				width: 320px;
+				}
+				.show_menu_fav{
+					display: inline;
+				}
+				.show_menu_fav li{
+					margin-top: 5px !important;
+				}
+
+			}
+			.activatorAktifGaji {
+                background: #1AC6C4!important;
+                color: #fff!important
+            }
+
+			.activatorNonAktifGaji{background:#b0b0b0!important;color:#fff!important}
+
+			#promoGadjian {
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    width: 80px;
+			}
+
+			.editFormula2 {
+				position: absolute !important;
+				right: 55px;
+				top: 0;
+			}
+
+	</style>
+	<!-- End CSS Code -->
+	<!-- Start Javascript Core -->
+
+		<script src="/static/js/corejs/jquery.min.js" type="text/javascript"></script>
+		<script src="/static/js/corejs/bootstrap.min.js" type="text/javascript"></script>
+		<script src="/static/js/corejs/chosen.jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/static/js/appjs/global201020162.js"></script>
+		<script src="/static/js/plugin/jquery.gdocsviewer.min.js" type="text/javascript"></script>
+
+			<script type="text/javascript">
+				 /*<![CDATA[*/
+				$(document).ready(function() {
+					$('a.embed').gdocsViewer({width:'100%', height: 700});
+					$('a.embed-xs').gdocsViewer({width:'100%', height: 400});
+					$('#embedURL').gdocsViewer();
+				});
+				/*]]>*/
+
+			</script>
+
+
+	<!-- Start ChartJS for IE8 and below -->
+		<!--[if lte IE 8]>
+		<script src="excanvas.js"></script>
+		<![endif]-->
+	<!-- End ChartJS for IE8 and below -->
+
+			<!-- start Mixpanel --><!-- <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+			for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+			mixpanel.init("da10ff69b809bc72781267298e8cf587");</script> --><!-- end Mixpanel -->
+
+		<!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+		0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+		for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+		mixpanel.init("1a8ace1547ab066039a08d2ea19c64a7");</script><!-- end Mixpanel -->
+
+			<script>
+			  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  	// ga('create', 'UA-69390832-2', 'auto');
+			  	// ga('send', 'pageview');
+			  	ga('create', 'UA-69390832-2', {'allowAnchor': true, 'userId' : '170200183'});
+			 	 ga('send', 'pageview', {
+				 	'page': location.pathname + location.search  + location.hash
+				});
+			 	 console.log(location.pathname + location.search + location.hash);
+
+
+
+			</script>
+			<script type="text/javascript">/*<![CDATA[*/
+		        (function(u, t, c, s, r)
+		          { !t[c] && (t[c] = { projectId: 'ed7a4b4e6d42337f8b179be81a682d55'}) && (r = u.createElement(s)) && (r.src = 'https://unamo.net/unamo.js') && (u.head.appendChild(r)); })
+		        (document, window, 'Unamo Session Recording', 'script');
+		    /*]]>*/</script>
+	</head>
+<body id="dashboard">
+
+			<input id="gdjAppId" type="text" class="hide" value="release">
+	
+		<div id="adminMenu" class="p-l-sm">
+			<div id="adminMenuCtrl" class="p-xs pull-left">
+				<img src="/static/images/delicious_swirl.png" alt="" class="img-responsive">
+			</div>
+			<i class="fa fa-times pull-right m-r-lg m-t-sm" id="adminMenuTutup"></i>
+			<ul class="text-left p-l-n m-t-lg m-b-n maheMenu">
+	
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Info Tim Gadjian"
+						data-mix-function="Klik sidebar menu Info Tim Gadjian"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/blasting" ><i class="fa fa-bullhorn fa-md fa-fw"></i>Info Tim Gadjian <span class="badge badgeDanger">4</span>
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Deposit & Tagihan"
+						data-mix-function="Klik sidebar menu Deposit & Tagihan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/bill" ><i class="fa fa-calculator fa-md fa-fw"></i>Deposit & Tagihan 
+					</a>
+				</li>
+			
+						<li data-toggle="collapse" data-target="#submenu_44" class="collapsed ">
+							<a class=" " > <i class="fa fa-wrench fa-md fa-fw"></i>Ubah Layanan  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_44">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Tambah Kuota"
+						data-mix-function="Klik sidebar menu Tambah Kuota"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/layanan/tambah" >Tambah Kuota 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Naikkan Layanan"
+						data-mix-function="Klik sidebar menu Naikkan Layanan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/layanan/upgrade" >Naikkan Layanan 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Periode Pembayaran"
+						data-mix-function="Klik sidebar menu Periode Pembayaran"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/layanan/ubahperiode" >Periode Pembayaran 
+					</a>
+				</li>
+			
+			</ul>
+		
+						<li data-toggle="collapse" data-target="#submenu_68" class="collapsed ">
+							<a class=" new-menu "> <i class="fa fa-money fa-md fa-fw"></i> Poin Gadjian  
+								<span class="label label-info label-new-menu text-right">NEW</span>
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_68">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Ajak teman"
+						data-mix-function="Klik sidebar menu Ajak teman"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/refer" >Ajak teman 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Saldo Poin"
+						data-mix-function="Klik sidebar menu Saldo Poin"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/poin" >Saldo Poin 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Gift Gadjian"
+						data-mix-function="Klik sidebar menu Gift Gadjian"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/tukarpoin" >Gift Gadjian 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Histori Penukaran"
+						data-mix-function="Klik sidebar menu Histori Penukaran"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/historiklaim" >Histori Penukaran 
+					</a>
+				</li>
+			
+			</ul>
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Kontak CS Gadjian"
+						data-mix-function="Klik sidebar menu Kontak CS Gadjian"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/contact" ><i class="fa fa-envelope-o fa-md fa-fw"></i>Kontak CS Gadjian 
+					</a>
+				</li>
+			
+	<li class="statistikAkun statistik p-b-sm p-l-sm p-t-sm m-t-sm">
+		<a>
+			<b>Statistik Akun </b>
+		</a>
+		<a>
+			Paket Aktif : 
+				<span>
+					Sukses (6)				</span> <br>
+		</a>
+		<a>
+			Jumlah Admin : <span>2</span> <br>
+		</a>
+		<p class="m-b-n">
+			<a>
+				Deposit : <span>Rp 0</span><br>				Tagihan : <span class="tagihan">Rp. 0</span>
+			</a>
+		</p>
+	</li>
+</ul>
+		</div>
+	
+
+
+<div class="modal modal-konfirmasi" id="modalSlipGaji" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12 b-t-n" id="tampilanSlipGaji">
+						<div class="row">
+							<div class="col-xs-8 judul"></div>
+							<div class="col-xs-2">
+							</div>
+							<div class="col-xs-2">
+								<div class="pull-right">
+									<a id="linkBtnPDF">
+										<button class="btn btn-warning btn-sm m-b-sm" id="btnPDF"><i class="fa fa-file-pdf-o"></i></button>
+									</a>
+									<button class="btn btn-warning btn-sm m-b-sm" id="ubahSlipGaji"><i class="fa fa-pencil"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="row loading hide"><div style="padding: 50px 0px 50px 0px; text-align: center"><span style="font-size: 20pt"><i class="fa fa-spinner"></i></span><br>Loading data.</div></div>
+						<div class="row error hide"><div style="padding: 50px 0px 50px 0px; text-align: center"><span style="font-size: 30pt"><i class="fa fa-warning"></i></span><br>Oops.. Ada error pada <em>request</em> menampilkan slip gaji.<br>Silakan laporkan ke CS Gadjian <a href="/contact/new-ticket/?tipe=2">disini</a>.</div></div>
+						<div class="row view">
+
+						</div>
+					</div>
+					<div class="col-xs-12 b-t-n hide" id="formSlipGaji">
+						<div class="row">
+							<div class="col-xs-12 judul"></div>
+						</div>
+						<div class="row isi">
+						</div>
+
+					</div>
+					<div class="col-xs-12 b-t-n hide" id="formTambahIncome">
+						<form action="" class="form-horizontal">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="" class="col-md-4 control-label">
+											Nama Pendapatan										</label>
+										<div class="col-md-5">
+											<input type="text" class="form-control" id="incomeName">
+											<p class="m-b-n m-t-xs text-right validatorNamaSama hide"><i class="fa fa-exclamation-triangle textDanger"></i> Nama ini sudah terpakai</p>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="" class="col-md-4 control-label">
+											Jumlah										</label>
+										<div class="col-md-5">
+											<div class="input-group">
+												<span class="input-group-addon add-on" id="basic-addon2">Rp</span>
+												<input type="text" id="incomeVal" class="form-control mataUang text-right" placeholder="" aria-describedby="basic-addon2" value="">
+											</div>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="" class="col-md-4 control-label">
+											Penambah THP										</label>
+										<div class="col-md-5">
+											<label class="radio-inline">
+											  <input type="radio" name="penambahTHPIncome" id="penambahTHPIncome1" value="Ya"> Ya											</label>
+											<label class="radio-inline">
+											  <input type="radio" name="penambahTHPIncome" id="penambahTHPIncome2" value="Tidak"> Tidak											</label>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="" class="col-md-4 control-label">
+											Dipotong Pajak										</label>
+										<div class="col-md-5">
+											<label class="radio-inline">
+											  <input type="radio" name="potongPajak" id="potongPajak" value="Ya"> Ya											</label>
+											<label class="radio-inline">
+											  <input type="radio" name="potongPajak" id="potongPajak2" value="Tidak"> Tidak											</label>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+										</div>
+									</div>
+									<div class="form-group" id="colTipeIncome" style="display: none;">
+										<label for="" class="col-md-4 control-label">
+											Tipe Income										</label>
+										<div class="col-md-5">
+											<select name="" id="tipeIncome" class="form-control">
+												<option value=""></option>
+												<option value="jml3">TUNJANGAN LAINNYA, UANG LEMBUR DAN SEBAGAINYA</option>
+												<option value="jml4">HONORARIUM DAN IMBALAN LAIN SEJENISNYA</option>
+												<option value="jml5">PREMI ASURANSI YANG DIBAYAR PEMBERI KERJA</option>
+												<option value="jml6">PENERIMAAN DALAM BENTUK NATURA DAN KENIKMATAN LAINNYA YANG DIKENAKAN PEMOTONGAN PPh PASAL 21</option>
+												<option value="jml7">TANTIEM, BONUS, GRATIFIKASI, JASA PRODUKSI DAN THR (UNREGULER)</option>
+											</select>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> tolong isi inputan di atas</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-12">
+									<div class="pull-right">
+										<button type="button" class="btn-warning btn btn-sm" id="btnTambahIncome">Tambahkan</button>
+										<button class="btn btn-danger btn-sm" type="button" id="batalTambahIncome">Batal</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-12 b-t-n hide" id="formKasbon">
+						<div class="form-horizontal">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row m-b-md">
+										<div class="col-xs-12 judul text-center"><h4>Kasbon Tambah</h4></div>
+									</div>
+									<div class="form-group">
+										<label for="" class="col-md-2 control-label">
+											Jumlah										</label>
+										<div class="col-md-10">
+											<div class="input-group">
+												<input type="hidden" class="form-control" id="kasbonId" value="">
+												<span class="input-group-addon add-on" id="basic-addon2">Rp</span>
+												<input type="text" id="kasbonVal" class="form-control mataUang text-right" placeholder="" aria-describedby="basic-addon2" value="">
+												<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+												<p class="m-b-n m-t-xs hide text-right validatorMaks"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-12">
+									<div class="pull-right">
+										<button type="button" class="btn-warning btn btn-sm" id="btnTambahKasbon">Tambahkan</button>
+										<button class="btn btn-danger btn-sm" type="button" id="btnBatalKasbon">Batal</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 b-t-n hide" id="formTambahDeduction">
+						<form action="" class="form-horizontal">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label for="" class="col-md-2 control-label">
+											Nama Potongan										</label>
+										<div class="col-md-10">
+											<input type="text" class="form-control" id="deductionName">
+											<p class="m-b-n m-t-xs text-right validatorNamaSama hide"><i class="fa fa-exclamation-triangle textDanger"></i> Nama ini sudah terpakai</p>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="" class="col-md-2 control-label">
+											Jumlah										</label>
+										<div class="col-md-10">
+											<div class="input-group">
+												<span class="input-group-addon add-on" id="basic-addon2">Rp</span>
+												<input type="text" id="deductionVal" name="tgl_lahir" class="form-control mataUang text-right" placeholder="" aria-describedby="basic-addon2" value="">
+											</div>
+											<p class="m-b-n m-t-xs hide text-right validatorKosong"><i class="fa fa-exclamation-triangle textDanger"></i> Tolong isi inputan di atas</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-12">
+									<div class="pull-right">
+										<button type="button" class="btn-warning btn btn-sm" id="btnTambahDeduction">Tambahkan</button>
+										<button class="btn btn-danger btn-sm" type="button" id="batalTambahDeduction">Batal</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script>
+	$(document).ready(function(){
+		$('#').css('opacity', 0).animate({opacity: 1,bottom : "10px"}, 1313);
+		$('#').click(function(){
+			// $(this).animate({left : "-700px"}, 500);
+			$(this).animate({opacity: 0,left : "-40px"}, 313, function(){
+				$(this).remove();
+			});
+		});
+	});
+	</script>
+	
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top softShadow">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/depan"><img src=https://s3-ap-southeast-1.amazonaws.com/gdj-app/user.gadjian/perusahaan/company_170200183_photo.jpg?1499847775 alt=""></a>
+		<div id="navbar">
+
+			<ul id="favoriteList" class="nav navbar-nav show_menu_fav textXXs">
+			
+											<li><a href='/personalia'><span class='label label-info'>Data Pribadi</span></a></li>
+										
+											<li><a href='/karir'><span class='label label-info'>Karir & Remunerasi</span></a></li>
+														<li data-toggle="tooltip" data-placement="bottom" role="presentation" data-original-title="Klik untuk memilih menu favorit" name="tooltip_thumb_tack">
+					<a style="cursor: pointer;"><span class="fa fa-thumb-tack choose-menu-fav hidden-sm hidden-xs"></span></a>
+				</li>
+
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="hidden-sm hidden-xs sesi-atas p-v-n-i text-right"></a>
+					<a class="hidden-sm hidden-xs waktu-atas p-v-n-i text-right"></a>
+				</li>
+				<li>
+					<div class="media">
+	                    <div class="media-left media-middle p-r-xs">
+	                        <img src="/static/images/gg.png" alt="">
+	                    </div>
+	                    <div class="media-body media-middle userName text-dark-white hidden-sm hidden-xs">
+	                    	Ryujin	                    </div>
+                    </div>
+				</li>
+				<!-- <li class="dropdown notif dropdown-panjang">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+						<i class="fa fa-bell-o"></i>
+						<span>69</span>
+					</a>
+					<ul class="dropdown-menu" role="menu" id="notifikasi">
+						<div class="arrow-up pull-right"></div>
+						<div class="text-center judul_dropdown">NOTIFIKASI</div>
+
+						<li><a href="#"><i class="fa fa-medkit fa-fw"></i> 1 personalia mengajukan Sakit. </a></li>
+						<li><a href="#"><i class="fa fa-plane fa-fw"></i> 1 personalia mengajukan Izin Potong Cuti.</a></li>
+						<li><a href="#"><i class="fa fa-plane fa-fw"></i> 1 personalia mengajukan cuti.</a></li>
+						<li><a href="#"><i class="fa fa-smile-o fa-fw"></i> 1 karyawan PKWT akan berakhir kontraknya dalam 1 bulan.</a></li>
+						<li><a href="#"><i class="fa fa-smile-o fa-fw"></i> 1 karyawan PKWT telah berakhir kontraknya namun belum diperpanjang.</a></li>
+						<li><a href="#"><i class="fa fa-smile-o fa-fw"></i> 1 karyawan masa percobaannya akan berakhir dalam 1 bulan.</a></li>
+						<li><a href="#"><i class="fa fa-smile-o fa-fw"></i> 1 karyawan masa percobaannya telah berakhir namun belum diangkat Karyawan Tetap.</a></li>
+						<li><a href="#"><i class="fa fa-birthday-cake fa-fw"></i> Andre Stinky dan Mang Saswi berulang tahun.</a></li>
+						<li class="text-center"><a href="notifikasi.html">Lihat Semuanya</a></li>
+					</ul>
+				</li> -->
+				<li class="dropdown notif dropdown-pendek">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+						<i class="fa fa-cog"></i>
+					</a>
+					<ul class="dropdown-menu" role="menu" id="pengaturan_akun">
+						<div class="arrow-up pull-right"></div>
+						<li><a href="/profile">Ubah Data Anda</a></li>
+						<li><a href="/profile/ubah-password">Ubah Kata Sandi </a></li>
+																								<!-- <li id="ubahBahasaSementara"><a>Change to English</a></li> -->
+										<li><a href="/changelanguage/en/?redirect=https%3A%2F%2Fuser.gadjian.com%2Fpengaturanpolker%2Ftambah-polker">Change to English</a></li>
+									
+						<li><a href="/keluar">Sign out</a></li>
+					</ul>
+				</li>
+				<li id="menu_toggler">
+					<a>
+						<i class="fa fa-bars fa-2x toggle-btn menu-toggle" id="menu-toggle" data-target="#menu-content"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="menu_fav">
+	<div class="row">
+		<div class="col-md-12">
+			<p class="p-h-lg m-l-xs textXXs">
+				Silahkan pilih menu favorit yang Anda inginkan <strong>(maksimal 4)</strong>
+			</p>
+			<div id="menu_fav_container">
+				<ul class="p-h-md textXXs column_menuFav">
+													<label>
+						<li class=" ">Admin<input class="pull-right" type="checkbox" name="menfav" value="42"  ></li>								</label>
+														<label>
+						<li class=" ">Ajak teman<input class="pull-right" type="checkbox" name="menfav" value="69"  ></li>								</label>
+														<label>
+						<li class=" ">Bagian & Pekerjaan<input class="pull-right" type="checkbox" name="menfav" value="4"  ></li>								</label>
+														<label>
+						<li class=" ">BPJS<input class="pull-right" type="checkbox" name="menfav" value="13"  ></li>								</label>
+														<label>
+						<li class=" ">Buat Pengumuman<input class="pull-right" type="checkbox" name="menfav" value="60"  ></li>								</label>
+														<label>
+						<li class=" ">Code of Account<input class="pull-right" type="checkbox" name="menfav" value="63"  ></li>								</label>
+														<label>
+						<li class=" ">CSV eSPT PPh 21<input class="pull-right" type="checkbox" name="menfav" value="33"  ></li>								</label>
+														<label>
+						<li class=" ">Cuti<input class="pull-right" type="checkbox" name="menfav" value="8"  ></li>								</label>
+														<label>
+						<li class=" ">Data Absensi<input class="pull-right" type="checkbox" name="menfav" value="19"  ></li>								</label>
+														<label>
+						<li class=" ">Data Cuti<input class="pull-right" type="checkbox" name="menfav" value="28"  ></li>								</label>
+														<label>
+						<li class="menu_fav_terpilih ">Data Pribadi<input class="pull-right" type="checkbox" name="menfav" value="56" checked ></li>								</label>
+														<label>
+						<li class=" ">Demo Tutorial<input class="pull-right" type="checkbox" name="menfav" value="67"  ></li>								</label>
+														<label>
+						<li class=" ">Deposit & Tagihan<input class="pull-right" type="checkbox" name="menfav" value="43"  ></li>								</label>
+														<label>
+						<li class=" ">Form A1<input class="pull-right" type="checkbox" name="menfav" value="34"  ></li>								</label>
+														<label>
+						<li class=" ">Gaji & LTHR<input class="pull-right" type="checkbox" name="menfav" value="52"  ></li>								</label>
+														<label>
+						<li class=" ">Gaji & THR<input class="pull-right" type="checkbox" name="menfav" value="21"  ></li>								</label>
+														<label>
+						<li class=" ">Gift Gadjian<input class="pull-right" type="checkbox" name="menfav" value="71"  ></li>								</label>
+														<label>
+						<li class=" ">Histori Penukaran<input class="pull-right" type="checkbox" name="menfav" value="72"  ></li>								</label>
+														<label>
+						<li class=" ">Info Tim Gadjian<input class="pull-right" type="checkbox" name="menfav" value="48"  ></li>								</label>
+														<label>
+						<li class=" ">Izin<input class="pull-right" type="checkbox" name="menfav" value="54"  ></li>								</label>
+														<label>
+						<li class=" ">Jurnal Akuntansi<input class="pull-right" type="checkbox" name="menfav" value="64"  ></li>								</label>
+														<label>
+						<li class=" ">Kalender <input class="pull-right" type="checkbox" name="menfav" value="3"  ></li>								</label>
+														<label>
+						<li class="menu_fav_terpilih ">Karir & Remunerasi<input class="pull-right" type="checkbox" name="menfav" value="57" checked ></li>								</label>
+														<label>
+						<li class=" ">Kelola Kasbon<input class="pull-right" type="checkbox" name="menfav" value="31"  ></li>								</label>
+														<label>
+						<li class=" ">Kesehatan<input class="pull-right" type="checkbox" name="menfav" value="39"  ></li>								</label>
+														<label>
+						<li class=" ">Ketenagakerjaan<input class="pull-right" type="checkbox" name="menfav" value="37"  ></li>								</label>
+														<label>
+						<li class=" ">Kontak CS Gadjian<input class="pull-right" type="checkbox" name="menfav" value="46"  ></li>								</label>
+														<label>
+						<li class=" ">Naikkan Layanan<input class="pull-right" type="checkbox" name="menfav" value="50"  ></li>								</label>
+														<label>
+						<li class=" ">Pengajuan Cuti<input class="pull-right" type="checkbox" name="menfav" value="29"  ></li>								</label>
+														<label>
+						<li class=" ">Pengajuan Izin<input class="pull-right" type="checkbox" name="menfav" value="26"  ></li>								</label>
+														<label>
+						<li class=" ">Pengajuan Sakit<input class="pull-right" type="checkbox" name="menfav" value="23"  ></li>								</label>
+														<label>
+						<li class=" ">Penggajian<input class="pull-right" type="checkbox" name="menfav" value="53"  ></li>								</label>
+														<label>
+						<li class=" ">Periode Pembayaran<input class="pull-right" type="checkbox" name="menfav" value="51"  ></li>								</label>
+														<label>
+						<li class=" ">Perusahaan<input class="pull-right" type="checkbox" name="menfav" value="16"  ></li>								</label>
+														<label>
+						<li class=" ">Pola & Jadwal Kerja<input class="pull-right" type="checkbox" name="menfav" value="74"  ></li>								</label>
+														<label>
+						<li class=" ">Pola Kerja Karyawan<input class="pull-right" type="checkbox" name="menfav" value="73"  ></li>								</label>
+														<label>
+						<li class=" ">PPh 21<input class="pull-right" type="checkbox" name="menfav" value="9"  ></li>								</label>
+														<label>
+						<li class=" ">PPh 21 Awal<input class="pull-right" type="checkbox" name="menfav" value="59"  ></li>								</label>
+														<label>
+						<li class=" ">Rekap Absensi<input class="pull-right" type="checkbox" name="menfav" value="55"  ></li>								</label>
+														<label>
+						<li class=" ">Saldo Poin<input class="pull-right" type="checkbox" name="menfav" value="70"  ></li>								</label>
+														<label>
+						<li class=" ">Sisa Cuti Awal<input class="pull-right" type="checkbox" name="menfav" value="58"  ></li>								</label>
+														<label>
+						<li class=" ">Tambah Kuota<input class="pull-right" type="checkbox" name="menfav" value="49"  ></li>								</label>
+														<label>
+						<li class=" ">Unpaid Leave<input class="pull-right" type="checkbox" name="menfav" value="30"  ></li>								</label>
+										</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row closeButton m-t-md">
+		<div class="col-xs-12 text-center">
+			<a style="cursor: pointer;" class="close-menu-fav p-v-xs"><i class="fa fa-chevron-up"></i> close</a>
+		</div>
+	</div>
+</div>
+
+<!-- MODAL UNTUK ALERT -->
+<div class="modal modal-konfirmasi" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<img src="/static/images/gg.png" alt="" class="center-block">
+			</div>
+			<div class="modal-body">
+				<div class="col-xs-12 ">
+					<p class="text-center">
+						Maaf karena Anda adalah Admin Pendukung, maka menu ini tidak tersedia.					</p>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-konfirmasi" id="modalWl" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<img src="../../static/images/gg.png" alt="" class="center-block">
+			</div>
+			<div class="modal-body">
+				<div class="col-xs-12 ">
+					<p class="text-center">Info White Label</p>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper" class="dashboard_page">
+<!-- <div id="wrapper"> -->
+
+
+
+	<!-- <div class="nav-side-menu" data-spy="affix" data-offset-top="0" data-offset-bottom="200"> -->
+	<div class="nav-side-menu">
+		<div class="menu-list">
+			<div id="side-menu-header">
+				<!-- <div class="row">
+					<div class="col-xs-12">
+						<div class="media">
+							<div class="media-left">
+								<a href="#">
+									<img src="/static/images/gg.png" alt="" class="img-circle media-object">
+								</a>
+							</div>
+							<div class="media-body media-middle">
+
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div class="row">
+					<div class="col-xs-12 text-center" id="sbNamaPerusahaan">
+						<p>Sukses Selalu</p>
+						PT Kreasi Digital Sinergi !
+
+											</div>
+				</div>
+			</div>
+			
+<ul id="menu-content" class="menu-content maheMenu">
+	
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Beranda"
+						data-mix-function="Klik sidebar menu Beranda"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/depan" ><i class="fa fa-home fa-lg fa-fw"></i>Beranda 
+					</a>
+				</li>
+			
+						<li data-toggle="collapse" data-target="#submenu_2" class="collapsed ">
+							<a class=" " > <i class="fa fa-cogs fa-lg fa-fw"></i>Pengaturan  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse  in " id="submenu_2">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Bagian & Pekerjaan"
+						data-mix-function="Klik sidebar menu Bagian & Pekerjaan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturanbagian" >Bagian & Pekerjaan 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Kalender "
+						data-mix-function="Klik sidebar menu Kalender "
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturankalender" >Kalender  
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Gaji & LTHR"
+						data-mix-function="Klik sidebar menu Gaji & LTHR"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturangaji" >Gaji & LTHR 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Penggajian"
+						data-mix-function="Klik sidebar menu Penggajian"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Penggajian" >Penggajian 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Cuti"
+						data-mix-function="Klik sidebar menu Cuti"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturancuti" >Cuti 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Izin"
+						data-mix-function="Klik sidebar menu Izin"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturanizin" >Izin 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu PPh 21"
+						data-mix-function="Klik sidebar menu PPh 21"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturanpph" >PPh 21 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu BPJS"
+						data-mix-function="Klik sidebar menu BPJS"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Pengaturanbpjs" >BPJS 
+					</a>
+				</li>
+			
+				<li class=" active " >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Pola & Jadwal Kerja"
+						data-mix-function="Klik sidebar menu Pola & Jadwal Kerja"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/pengaturanpolker" >Pola & Jadwal Kerja 
+					</a>
+				</li>
+			
+			</ul>
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Perusahaan"
+						data-mix-function="Klik sidebar menu Perusahaan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/akun" ><i class="fa fa-folder-o fa-md fa-fw"></i>Perusahaan 
+					</a>
+				</li>
+			
+						<li data-toggle="collapse" data-target="#submenu_17" class="collapsed ">
+							<a class=" " > <i class="fa fa-smile-o fa-lg fa-fw"></i>Personalia  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_17">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Data Pribadi"
+						data-mix-function="Klik sidebar menu Data Pribadi"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/personalia" >Data Pribadi 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Karir & Remunerasi"
+						data-mix-function="Klik sidebar menu Karir & Remunerasi"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/karir" >Karir & Remunerasi 
+					</a>
+				</li>
+			
+			</ul>
+		
+						<li data-toggle="collapse" data-target="#submenu_18" class="collapsed ">
+							<a class=" " > <i class="fa fa-book fa-md fa-fw"></i>Kehadiran  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_18">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Data Absensi"
+						data-mix-function="Klik sidebar menu Data Absensi"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/absensi" >Data Absensi 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Rekap Absensi"
+						data-mix-function="Klik sidebar menu Rekap Absensi"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/Rekapkehadiran" >Rekap Absensi 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Pola Kerja Karyawan"
+						data-mix-function="Klik sidebar menu Pola Kerja Karyawan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/polkerkar" >Pola Kerja Karyawan 
+					</a>
+				</li>
+			
+			</ul>
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Gaji & THR"
+						data-mix-function="Klik sidebar menu Gaji & THR"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/komben" ><i class="fa fa-usd fa-md fa-fw"></i>Gaji & THR 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Kelola Kasbon"
+						data-mix-function="Klik sidebar menu Kelola Kasbon"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/kasbon" ><i class="fa fa-money fa-md fa-fw"></i>Kelola Kasbon 
+					</a>
+				</li>
+			
+						<li data-toggle="collapse" data-target="#submenu_22" class="collapsed ">
+							<a class=" " > <i class="fa fa-medkit fa-md fa-fw"></i>Sakit & Izin  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_22">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Pengajuan Sakit"
+						data-mix-function="Klik sidebar menu Pengajuan Sakit"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/sakit" >Pengajuan Sakit 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Pengajuan Izin"
+						data-mix-function="Klik sidebar menu Pengajuan Izin"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/izin" >Pengajuan Izin 
+					</a>
+				</li>
+			
+			</ul>
+		
+						<li data-toggle="collapse" data-target="#submenu_27" class="collapsed ">
+							<a class=" " > <i class="fa fa-plane fa-md fa-fw"></i>Kelola Cuti   
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_27">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Data Cuti"
+						data-mix-function="Klik sidebar menu Data Cuti"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/cutah" >Data Cuti 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Pengajuan Cuti"
+						data-mix-function="Klik sidebar menu Pengajuan Cuti"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/pengajuancuti" >Pengajuan Cuti 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Sisa Cuti Awal"
+						data-mix-function="Klik sidebar menu Sisa Cuti Awal"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/cutiawal" >Sisa Cuti Awal 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Unpaid Leave"
+						data-mix-function="Klik sidebar menu Unpaid Leave"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/unpaidleave" >Unpaid Leave 
+					</a>
+				</li>
+			
+			</ul>
+		
+						<li data-toggle="collapse" data-target="#submenu_32" class="collapsed ">
+							<a class=" " > <i class="fa fa-gavel fa-md fa-fw"></i>Kelola PPh 21  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_32">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu CSV eSPT PPh 21"
+						data-mix-function="Klik sidebar menu CSV eSPT PPh 21"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/csv" >CSV eSPT PPh 21 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Form A1"
+						data-mix-function="Klik sidebar menu Form A1"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/forma1" >Form A1 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu PPh 21 Awal"
+						data-mix-function="Klik sidebar menu PPh 21 Awal"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/pph21awal" >PPh 21 Awal 
+					</a>
+				</li>
+			
+			</ul>
+		
+						<li data-toggle="collapse" data-target="#submenu_35" class="collapsed ">
+							<a class=" " > <i class="fa fa-hospital-o fa-md fa-fw"></i>Kelola BPJS  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_35">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Ketenagakerjaan"
+						data-mix-function="Klik sidebar menu Ketenagakerjaan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/lapbpjsnaker" >Ketenagakerjaan 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Kesehatan"
+						data-mix-function="Klik sidebar menu Kesehatan"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/lapbpjskes" >Kesehatan 
+					</a>
+				</li>
+			
+			</ul>
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Buat Pengumuman"
+						data-mix-function="Klik sidebar menu Buat Pengumuman"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/pengumuman" ><i class="fa fa-bullhorn fa-md fa-fw"></i>Buat Pengumuman 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser  inactiveMenu "
+						data-mix-name="Sidebar menu Admin"
+						data-mix-function="Klik sidebar menu Admin"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						data-toggle="modal" data-target="#myModal" ><i class="fa fa-user"></i>Admin 
+					</a>
+				</li>
+			
+						<li data-toggle="collapse" data-target="#submenu_62" class="collapsed ">
+							<a class=" " > <i class="fa fa-calculator fa-md fa-fw"></i>Pembukuan Gaji  
+								<i class="fa fa-angle-down pull-right"></i>
+								<i class="fa fa-angle-up pull-right hide"></i>
+							</a>
+						</li>
+					
+			<ul class="outer_menu sub-menu collapse " id="submenu_62">
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Code of Account"
+						data-mix-function="Klik sidebar menu Code of Account"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/coa" >Code of Account 
+					</a>
+				</li>
+			
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Jurnal Akuntansi"
+						data-mix-function="Klik sidebar menu Jurnal Akuntansi"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/jurnal" >Jurnal Akuntansi 
+					</a>
+				</li>
+			
+			</ul>
+		
+				<li class="" >
+					<a class="btnMixUser "
+						data-mix-name="Sidebar menu Demo Tutorial"
+						data-mix-function="Klik sidebar menu Demo Tutorial"
+						data-mix-port="user.gadjian.com | sukses | Sidebar menu"
+						href="/help" ><i class="fa fa-question-circle"></i>Demo Tutorial 
+					</a>
+				</li>
+			<hr>	<!-- <li id="statistik_akun" class="statistik_akun">
+		<a>
+			Jumlah Admin : <span>1</span> <br>
+			<p>Deposit <span>Rp 0</span><br>			Tagihan: <span class="tagihan">Rp. 0</span>
+		</a>
+	</li> -->
+
+</ul>
+		 </div>
+	</div>
+
+	<div id="page-content" class="single_panel">
+
+	<input type="hidden" id="namaWeb" value="user.gadjian.com">
+	<input type="hidden" id="lia" value="170200183">
+
+
+		<script type="text/javascript">
+			console.log("");
+		</script>
+<style type="text/css">
+	.libur 	{
+		background: #fa8072 !important;
+	}
+	.selectlibur {
+		background: url(../static/images/caretDown2.png) right 5px center no-repeat #fa8072 !important;
+		background-size: 30px 30px !important;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+	}
+</style>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panelGadjian">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-12">
+							<h3 class="panel-title">Tambah Pola dan Jadwal Kerja Baru</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<ol class='breadcrumb'><li><a href="/depan">Beranda</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Pengaturan <span class="caret"></span></a><ul class="dropdown-menu"><li ><a href="/Pengaturanbagian">Bagian & Pekerjaan</a></li><li ><a href="/Pengaturankalender">Kalender </a></li><li ><a href="/Pengaturangaji">Gaji & LTHR</a></li><li ><a href="/Penggajian">Penggajian</a></li><li ><a href="/Pengaturancuti">Cuti</a></li><li ><a href="/Pengaturanizin">Izin</a></li><li ><a href="/Pengaturanpph">PPh 21</a></li><li ><a href="/Pengaturanbpjs">BPJS</a></li><li class="active"><a href="/pengaturanpolker">Pola & Jadwal Kerja</a></li></li></ul><li class="active">Pola & Jadwal Kerja</li></ol>					</div>
+				</div>
+				<div class="panel-body single_panel p-t-lg">
+					<div class="row">
+						<div class="col-xs-12">
+							<form class="form-horizontal" method="post" action="/pengaturanpolker/tambah-save" id="pengaturanpolker" novalidate>
+								<div class="form-group">
+									<label class="col-md-2 col-xs-4 control-label">Nama Pola Kerja</label>
+									<div class="col-md-6 col-xs-8">
+										<input type="text" class="form-control" name="pola_kerja" id="polakerja" required data-validation-required-message="Nama pola kerja tidak boleh kosong">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-md-2 col-xs-4 control-label">Jumlah Hari Pola Kerja</label>
+									<div class="col-md-10 col-xs-6">
+										<div class="row">
+											<div class="col-md-2">
+												<input type="number" class="form-control" name="jumlah_hari" id="jumlahhari" min="1" max="365" data-validation-min-message="Minimal jumlah hari dalam satu siklus pola kerja adalah 1 hari" required data-validation-required-message="Jumlah hari pola kerja tidak boleh kosong">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<p class="help-block"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-md-3 col-xs-12 col-md-offset-2">
+										<div class="checkbox">
+											<label><input type="checkbox" id="pengaturantoleransi" checked> Terapkan toleransi keterlambatan</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group" id="toleransiketerlambatan">
+									<label class="control-label col-xs-4 col-md-2">Toleransi Keterlambatan</label>
+									<div class="col-xs-6 col-md-8">
+										<div class="row">
+											<div class="col-md-2 col-xs-6">
+												<input type="number" name="toleransi" class="form-control" value="0" min="0" data-validation-min-message="Lama keterlambatan tidak bisa lebih kecil daripada 0 menit">
+											</div>
+											<div class="col-md-2 col-xs-3" style="padding: 0">
+												<label class="control-label">Menit</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 col-xs-12">
+												<p class="help-block"></p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group" id="jadwalkerja">
+									<label class="col-md-2 control-label">Jadwal Kerja</label>
+									<div class="col-md-2">
+										<a class="btn btn-warning btn-gadjian col-xs-12 col-md-12" id="btnsetting" data-toggle="tooltip" data-placement="top" title data-original-title="Harap masukkan jumlah hari pola kerja terlebih dahulu" disabled>Ubah Massal</a>
+									</div>
+									<div class="col-md-2">
+										<button type="button" class="btn btn-warning col-xs-12 col-md-12" id="checkall" onclick="checkAll()">Tandai Semua</button>
+									</div>
+									<div class="col-md-2">
+										<button type="button" class="btn btn-warning col-xs-12 col-md-12" id="uncheckall" onclick="uncheckAll()">Jangan Tandai Semua</button>
+									</div>
+									<div class="col-md-2">
+										<button type="button" class="btn btn-danger col-xs-12 col-md-12" id="reset" onclick="resetjadwal()">Reset Jadwal</button>
+									</div>
+								</div>
+
+								<div id="polahari" style="margin-top: 2%"></div>
+
+								<input type='hidden' name='konci' value='6b636f61624937755634657a73786f44305132536c6b50386f596a4478743177'>
+								<div class="form-group">
+									<div class="col-md-12">
+										<div class="pull-right">
+											<button type="submit" class="btn btn-warning btn-gadjian" id="submit">Simpan</button>
+											<button type="button" class="btn btn-danger btn-gadjian" onclick="back()">Batal</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div id="modalsetting" class="modal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Setting Pola Hari</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-md-4 control-label">Status Pola Hari</label>
+						<div class="col-md-6">
+							<select class="form-control" id="statushari">
+								<option value="Hari Kerja">Hari Kerja</option>
+								<option value="Hari Libur">Hari Libur</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-4 control-label">Jam Masuk</label>
+						<div class="col-md-6">
+							<div class="bfh-timepicker jammasuk" data-time="08:00" data-name="modal_jam_kerja" data-toggle="tooltip" data-placement="top" title data-original-title="Jam masuk berformat 24 jam">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Jam Keluar</label>
+						<div class="col-md-6">
+							<div class="bfh-timepicker jamkeluar" data-time="17:00" data-name="modal_jam_keluar" data-toggle="tooltip" data-placement="top" title data-original-title="Jam masuk berformat 24 jam">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Lama Jam Kerja</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" id="lamabekerja" disabled>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-warning btn-gadjian" data-dismiss="modal" id="setjadwal">Set Jadwal</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/static/js/plugin/bootstrap-formhelpers.min.js" type="text/javascript"></script>
+<script src="/static/js/plugin/jqBootstrapValidation.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$("#pengaturantoleransi").click(function(){
+		if ($(this).is(':checked')) {
+			$("#toleransiketerlambatan").show();
+		} else {
+			$("#toleransiketerlambatan").hide();
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	$(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+</script>
+
+<script type="text/javascript">
+	var jumlahHariLama = 0;
+	$("#jumlahhari").on('input', function(){
+		var jumlahHari = parseInt($("#jumlahhari").val()) || 0;
+
+		if (jumlahHari > 0) {
+			$("#btnsetting").removeAttr("data-toggle");
+			$("#btnsetting").removeAttr("disabled");
+			$("#btnsetting").removeAttr("data-placement");
+			$("#btnsetting").removeAttr("data-original-title");
+
+			$("#btnsetting").attr("data-toggle", "modal");
+			$("#btnsetting").attr("data-target", "#modalsetting");
+		} else {
+			$("#btnsetting").removeAttr("data-toggle");
+			$("#btnsetting").removeAttr("data-target");
+
+			$("#btnsetting").attr("data-toggle", "tooltip");
+			$("#btnsetting").attr("disabled", true);
+			$("#btnsetting").attr("data-placement", "top");
+			$("#btnsetting").attr("data-original-title", "Harap masukkan jumlah hari pola kerja terlebih dahulu");
+		}
+
+		var banyakIterasi = 0;
+		var hari = 0;
+		if (jumlahHari < jumlahHariLama) {
+			$(".polahari").remove();
+			banyakIterasi = jumlahHari;
+			hari = 0;
+		} else {
+			banyakIterasi = jumlahHari - jumlahHariLama;
+			hari = jumlahHariLama;
+		}
+
+		for(i = 0; i < banyakIterasi; i++){
+			$("#polahari").append('<div class="form-group polahari" style="margin-top: 2%">\
+										<div class="col-md-offset-2 col-md-10">\
+											<div class="checkbox col-md-2">\
+												<label><input id="haricheck'+(hari + 1)+'" type="checkbox" class="checkboxes" name="hari" value="'+(hari + 1)+'"> Hari '+(hari + 1)+'</label>\
+											</div>\
+											<div class="col-md-3">\
+												<select name="status_hari[]" class="form-control hariselect" id="hariselect'+(hari + 1)+'">\
+													<option value="Hari Kerja">Hari Kerja</option>\
+													<option value="Hari Libur">Hari Libur</option>\
+												</select>\
+											</div>\
+											<div class="col-md-3 col-xs-12">\
+												<div style="width: auto" id="harimasuk'+(hari + 1)+'" class="timepicker-masuk bfh-timepicker" data-time="08:00" data-toggle="tooltip" data-placement="top" title data-original-title="Jam masuk berformat 24 jam">\
+												</div>\
+											</div>\
+											<h5 class="col-md-1" style="text-align: center;">s/d</h5>\
+											<div class="col-md-3 col-xs-12">\
+												<div style="width: auto" id="haripulang'+(hari + 1)+'" class="timepicker-pulang bfh-timepicker" data-time="17:00" data-toggle="tooltip" data-placement="top" title data-original-title="Jam masuk berformat 24 jam">\
+												</div>\
+											</div>\
+										</div>\
+									</div>');
+
+			hari++;
+
+			$(".timepicker-masuk").bfhtimepicker({name: 'jam_masuk[]', time: '08:00', icon: ''});
+			$(".timepicker-pulang").bfhtimepicker({name: 'jam_pulang[]', time: '17:00', icon: ''});
+		}
+
+		jumlahHariLama = jumlahHari;
+
+		//fungsi shift: select multiple checkbox with shift key pressed
+		var lastChecked = null;	
+	    var $chkboxes = $('.checkboxes');
+
+	    $chkboxes.click(function(e) {
+	        if(!lastChecked) {
+	            lastChecked = this;
+	            return;
+	        }
+
+	        if(e.shiftKey) {
+	            var start = $chkboxes.index(this);
+	            var end = $chkboxes.index(lastChecked);
+
+	            $chkboxes.slice(Math.min(start,end), Math.max(start,end)+ 1).prop('checked', lastChecked.checked);
+
+	        }
+
+	        lastChecked = this;
+	    });
+
+	    $(".hariselect").change(function(){
+			var selected = $(this).val();
+
+			if (selected == 'Hari Libur') {
+				$(this).addClass('selectlibur');
+				$(this).parent().parent().addClass('libur');
+				$(this).parent().next().children().addClass('libur');
+				$(this).parent().next().next().next().children().addClass('libur');
+			} else {
+				$(this).removeClass('selectlibur');
+				$(this).parent().parent().removeClass('libur');
+				$(this).parent().next().children().removeClass('libur');
+				$(this).parent().next().next().next().children().removeClass('libur');
+			}
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var jamMasuk = $("input[name=modal_jam_kerja]").val();
+		var jamKeluar = $("input[name=modal_jam_keluar").val();
+
+		jamMasuk = new Date("2017-07-12 " + jamMasuk + ":00");
+		jamKeluar = new Date("2017-07-12 " + jamKeluar + ":00");
+
+		$("#lamabekerja").val(Math.abs(jamKeluar - jamMasuk) / 36e5);
+		
+		$(".jammasuk, .jamkeluar").on("change.bfhtimepicker", function() {
+			var jamMasuk = $("input[name=modal_jam_kerja]").val();
+			var jamKeluar = $("input[name=modal_jam_keluar").val();
+
+			jamMasuk = new Date("2017-07-12 " + jamMasuk + ":00");
+			jamKeluar = new Date("2017-07-12 " + jamKeluar + ":00");
+
+			if (jamKeluar <= jamMasuk) {
+				jamKeluar.setDate(jamKeluar.getDate() + 1);
+			}
+
+			$("#lamabekerja").val(Math.abs(jamKeluar - jamMasuk) / 36e5);
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$("#setjadwal").click(function(){
+		var jamMasuk = $("input[name=modal_jam_kerja]").val();
+		var jamKeluar = $("input[name=modal_jam_keluar]").val();
+		var statusHari = $("#statushari").val();
+		console.log("status hari: "+statusHari);
+
+		var checkedDay = [];
+		var selector = [];
+
+		$("input:checkbox[name=hari]:checked").each(function(){
+		    checkedDay.push($(this).val());
+		    selector.push($(this));
+		});
+
+		for (var i=0; i < checkedDay.length; i++){
+			$("#hariselect"+checkedDay[i]).val(statusHari);
+			$("#harimasuk"+checkedDay[i]).val(jamMasuk);
+			$("#haripulang"+checkedDay[i]).val(jamKeluar);
+
+			if (statusHari == 'Hari Libur') {
+				selector[i].parent().parent().parent().addClass('libur');
+				selector[i].parent().parent().next().children().addClass('selectlibur');
+				selector[i].parent().parent().next().next().children().addClass('libur');
+				selector[i].parent().parent().next().next().next().next().children().addClass('libur');
+			} else {
+				selector[i].parent().parent().parent().removeClass('libur');
+				selector[i].parent().parent().next().children().removeClass('selectlibur');
+				selector[i].parent().parent().next().next().children().removeClass('libur');
+				selector[i].parent().parent().next().next().next().next().children().removeClass('libur');
+			}
+		}
+
+		if (checkedDay.length == 0) {
+			$("#jengkiError").find("div").html("Tidak ada baris yang terpengaruh dikarenakan tidak ada hari yang dipilih !");
+
+			$('#jengkiError').css({"display":"block","opacity":"0","left":"30px","bottom":"-50px"}).animate({opacity: 1,bottom : "10px"}, 1313);
+			$('#jengkiError').click(function(){
+				$(this).animate({opacity: 0,left : "-40px"}, 313, function(){
+					$(this).css({"display":"none"});
+
+					$("#jengkiError").find("div").html("Ada inputan yang salah/belum diisi.");
+				});
+			});
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	function checkAll(){
+		$("input:checkbox[name=hari]").prop('checked', true);
+		return false;
+	}
+</script>
+
+<script type="text/javascript">
+	function uncheckAll(){
+		$("input:checkbox[name=hari]").prop('checked', false);
+		return false;
+	}
+</script>
+
+<script type="text/javascript">
+	function resetjadwal(){
+		checkAll();
+
+		var checkedDay = [];
+		var selector = [];
+
+		$("input:checkbox[name=hari]:checked").each(function(){
+		    checkedDay.push($(this).val());
+		    selector.push($(this));
+		});
+
+		for (var i=0; i < checkedDay.length; i++){
+			$("#hariselect"+checkedDay[i]).val('Hari Kerja');
+			$("#harimasuk"+checkedDay[i]).val('08:00');
+			$("#haripulang"+checkedDay[i]).val('17:00');
+
+			selector[i].parent().parent().parent().removeClass('libur');
+			selector[i].parent().parent().next().children().removeClass('selectlibur');
+			selector[i].parent().parent().next().next().children().removeClass('libur');
+			selector[i].parent().parent().next().next().next().next().children().removeClass('libur');
+		}
+
+		uncheckAll();
+	}
+</script>
+
+<script type="text/javascript">
+	$("#submit").click(function(){
+		$("#pengaturanpolker").submit();
+	});
+</script>
+
+<script type="text/javascript">
+	function back(){
+		window.location.href = "/pengaturanpolker";
+
+		return false;
+	}
+</script>
+
+<script type="text/javascript">
+	
+	
+</script>	</div>
+</div>
+
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="/static/images/Logo_Gadjiancom2.png" alt="">
+			</div>
+			<div class="col-md-3 sosial text-right col-md-push-6">
+				<a href="https://twitter.com/Gadjian" target="_blank">
+					<i class="fa fa-twitter text-center"></i>
+				</a>
+				<a href="http://facebook.com/gadjian" target="_blank">
+					<i class="fa fa-facebook text-center"></i>
+				</a>
+				<a href="https://www.linkedin.com/company/gadjian" target="_blank">
+					<i class="fa fa-linkedin-square text-center"></i>
+				</a>
+				<a href="http://www.meetup.com/Indonesia-Human-Resources-Meetup/" target="_blank">
+					<i class="fa fa-meetup text-center">N</i>
+				</a>
+			</div>
+			<div class="col-md-6 text-center col-md-pull-3">
+				<div class="row">
+					<div class="col-xs-12">
+						<ul>
+							<li><a href="https://www.gadjian.com/faq" target="_blank">FAQ</a></li>
+							<li><a href="https://www.gadjian.com/termofservice" target="_blank">Syarat & Ketentuan</a></li>
+							<li><a href="https://www.gadjian.com/privacy" target="_blank">Kebijakan Privasi</a></li>
+							<li><a href="https://www.gadjian.com/secpol" target="_blank">Kebijakan Keamanan</a></li>
+							<li><a href="https://www.gadjian.com/payment" target="_blank">Tagihan & Pembayaran</a></li>
+							<li><i class="fa fa-phone"></i>&nbsp;<strong>021-83793420</strong></li>
+						</ul>
+					</div>
+					<div class="col-xs-12">
+						<p>&copy;2017 Gadjian.com ALL RIGHT RESERVED</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="alert alert-danger" id="jengkiError">
+		<i class="icon-warning-sign"></i>
+		<div style="max-width: 800px; max-height: 200px; overflow: auto;">Ada inputan yang salah/belum diisi.</div>
+		<br><span style="font:italic 8pt arial">Klik untuk menyembunyikan</span>
+	</div>
+	<script>
+		$(document).ready(function(){
+
+			$("form").submit(function(e){
+				// Mendeteksi apakah ada yang error inputannya menurut jQbootstrapValidation? Kalo Iya, muncul popup
+			    if ($("input").jqBootstrapValidation("hasErrors")) {
+			      	$('#jengkiError').css({"display":"block","opacity":"0","left":"30px","bottom":"-50px"}).animate({opacity: 1,bottom : "10px"}, 1313);
+					$('#jengkiError').click(function(){
+						$(this).animate({opacity: 0,left : "-40px"}, 313, function(){
+							$(this).css({"display":"none"});
+						});
+					});
+			    }
+			});
+		});
+	</script>
+
+</footer>
+		<a href="#" class="scrollToTop" title="Scroll Ke Atas"><i class="fa fa-chevron-up icon-white"></i></a>
+
+		<script src="/static/js/plugin/jquery.dataTables.min.js"></script>
+		<script src="/static/js/plugin/footable_v3/js/footable.js"></script>
+		<script src="/static/js/appjs/error.js"></script>
+		<script>
+			$("#btnWl").click(function(){
+				$("#modalWl").modal("show");
+			});
+			$(document).ready(function(){
+
+				var t={".chosen-select":{},".chosen-select-deselect":{allow_single_deselect:!0},".chosen-select-no-single":{disable_search_threshold:10},".chosen-select-no-results":{no_results_text:"Oops, nothing found!"},".chosen-select-width":{width:"95%"}};for(var e in t)$(e).chosen(t[e]);
+
+									$('a').click(function() {
+					      ga('send','event','Button',$(this).prop('href'),null);
+					});
+				
+				$("#ubahBahasaSementara").click(function(){
+					$("#myModal").modal("show");
+					$("#myModal .modal-body p").text("Fitur ubah bahasa akan dapat digunakan segera. Mohon maaf atas ketidak nyamanannya.");
+				});
+
+
+				// Fungsi ajax untuk cek sesi
+				function checkSession() {
+					$.ajax({
+						url: '/ajax-cek-sesi',
+						type: 'post',
+						dataType: 'json',
+						data: {},
+						success: function(data){
+							console.log(data.status);
+							var minute = data.status > 1 ? "menit" : "menit";
+							// Cek jika return dari method cek sesi adalah bukan angka maka langsung logout. Tapi kalo angka, ya biarin aja gak diapa2in.
+							var minute = data.status > 1 ? "menit" : "menit";
+							if(!$.isNumeric(data.status)){
+								// window.location.href = "/keluar";
+								window.location.reload();
+							}else
+								$(".sesi-atas").html('Demi keamanan informasi, akun akan otomatis logout setelah  <div style="font-weight: bold; color: #FA7252; display: inline-block">'+data.status+'</div> '+minute);
+						},
+						error: function(){
+
+						}
+					});
+				}
+
+				checkSession();
+
+				// Fungsi ajax untuk cek waktu server
+				function checkWaktu() {
+					$.ajax({
+						url: '/ajax-cek-waktu',
+						type: 'post',
+						dataType: 'json',
+						data: {},
+						success: function(data){
+							console.log(data.waktu);
+							$(".waktu-atas").html(data.waktu);
+						},
+						error: function(){
+
+						}
+					});
+				}
+
+				checkWaktu();
+
+				// Ajax untuk mengecek timer di backend apakah udah saatnya logout otomatis atau belum
+				setInterval(function(){
+					checkSession();
+					checkWaktu();
+				}, 60000);
+
+
+
+				$('.inputDuit').keyup(function(event) {
+					// skip for arrow keys
+					if(event.which >= 37 && event.which <= 40){
+						event.preventDefault();
+					}
+
+					$(this).val(function(index, value) {
+						return value
+							.replace(/\D/g, "")
+							.replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",")
+						;
+					});
+				});
+
+				$(".breadcrumb .dropdown-menu > li > a.trigger").on("click",function(e){
+					var current=$(this).next();
+					var grandparent=$(this).parent().parent();
+					if($(this).hasClass('left-caret')||$(this).hasClass('right-caret')){
+						$(this).toggleClass('right-caret left-caret');
+					}
+					else if($(this).hasClass('up-caret')||$(this).hasClass('down-caret')){
+						$(this).toggleClass('down-caret up-caret');
+					}
+					grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
+					grandparent.find('.up-caret').not(this).toggleClass('down-caret up-caret');
+					grandparent.find(".sub-menu:visible").not(current).hide();
+					current.toggle();
+					e.stopPropagation();
+				});
+				$(".dropdown-menu > li > a:not(.trigger)").on("click",function(){
+					var root=$(this).closest('.dropdown');
+					root.find('.left-caret').toggleClass('right-caret left-caret');
+					root.find('.sub-menu:visible').hide();
+				});
+
+				$(".btn-informasi").click(function(){
+					$("#myModal p").text($(this).find(".infoBagian").text());
+				});
+					$('.footableTable').footable({
+						"empty": "Data tidak ditemukan"
+					});
+					// Memasukkan pengatur jumlah baris ke dalam tiap tabel yang meiliki class "footableTable"
+					$(".footableTable thead .form-inline").prepend('<div class="form-group">\
+					    <label class="sr-only" for="tableRows">Jumlah Baris</label>\
+					    <select name="" class="tableRows form-control">\
+							<option data-page-size="10">10</option>\
+							<option data-page-size="20">20</option>\
+							<option data-page-size="50">50</option>\
+							<option data-page-size="100">100</option>\
+							<option data-page-size="200">200</option>\
+						</select>\
+					</div>');
+					// Footable row size using select option
+						$(".tableRows").on("change",function(e){
+							e.preventDefault();
+							var jmlRow = $(this).find(':selected').data('page-size');
+							FooTable.get($(this).closest('.footableTable')).pageSize(jmlRow);
+						});
+
+				// DataTable initialisation
+					$('.dataTable').DataTable();
+						// Admin Menu
+						waktu = "";
+						// Event di adminMenu
+						$("#adminMenu").mouseleave(function() { // Masih ada bug di sini. Mouseleave kena juga ke childrennya!
+						    waktu = setTimeout(function(){
+								$("#adminMenu").removeClass("adminMenuMuncul");
+							},2000);
+						}).mouseenter(function(){
+							clearTimeout(waktu); // Agar ketika mouse dikeluarkan namun belum 2 detik masuk lagi, adminMenu tidak bersembunyi lagi
+						});
+			    	// Event di AdminMenuCtl
+						$("#adminMenuCtrl").mouseenter(function(){
+							setTimeOut = setTimeout(function(){
+								if($("#adminMenu").hasClass("adminMenuMuncul")){
+									$("#adminMenu").removeClass("adminMenuMuncul");
+								}
+								else{
+									$("#adminMenu").addClass("adminMenuMuncul");
+								}
+							},500);
+							clearTimeout(waktu);
+						}).mouseleave(function() { // Alasan kenapa ditambahkan ketka mouseleave dihapus timeoutnya, karena kalo gak, event2 bisa otomatis dieksekusi setelah waktunya habis setelah kita melakukan aksi dalam hal ini mouseenter.
+							clearTimeout(setTimeOut);
+							clearTimeout(waktu); // Ternyata bug yang sebelumnya ada ketika adminMenu dimouseleave bisa diselesaikan dengan mendestroynya di sini
+						});
+					// Event di tombol close adminMenu (adminMenuTutup)
+						$("#adminMenuTutup").click(function(){
+							$("#adminMenu").removeClass("adminMenuMuncul");
+						});
+
+			});
+
+							mixpanel.identify("170600335");
+				mixpanel.people.set({
+				    "$company_name": "PT Kreasi Digital Sinergi",
+				    "$email": "yusuf.aries@gmail.com",
+				    "$paket": "sukses",
+				    "$jumlah_admin": "1"
+				});
+
+				$(".btn-informasi").click(function(){
+					mixpanel.track("Klik Tombol Help", {"Penjelasan": $(this).find(".infoBagian").text()});
+				});
+
+				$(".btnMixUser").click(function(){
+					// var penjelasan = "Klik tombol "+$(this).text();
+					var penjelasan = $(this).attr('data-mix-port')+" - "+$(this).attr('data-mix-name')+" - "+$(this).attr('data-mix-function');
+					mixpanel.track(penjelasan);
+				});
+			
+
+		</script>
+
+		<button type="button" id="startWizard" class="hidden"></button>
+		<script>
+
+			
+		  window.intercomSettings = {
+									app_id: "phujgqav",
+								company:{
+				id:"170200183",
+				name:"PT Kreasi Digital Sinergi",
+				plan: "sukses",
+				phonenumber: "081389380702",
+				onboarding_completed: "TRUE"
+			},
+		    name: "Ryujin (Admin)", // Full name
+		    email: "yusuf.aries@gmail.com", // Email address
+			account_type: "admin",
+		    created_at: 1486314000, // Signup date as a Unix timestamp
+			user_hash: "921186d1e4af1a8c9043878f4670dbdcbd96d2c10876ca3777e3ce9bfd071be2"
+		  };
+		</script>
+		<script>
+		(function() {
+		    var w = window;
+		    var ic = w.Intercom;
+		    if (typeof ic === "function") {
+		        ic('reattach_activator');
+		        ic('update', intercomSettings);
+		    } else {
+		        var d = document;
+		        var i = function() {
+		            i.c(arguments)
+		        };
+		        i.q = [];
+		        i.c = function(args) {
+		            i.q.push(args)
+		        };
+		        w.Intercom = i;
+
+		        function l() {
+		            var s = d.createElement('script');
+		            s.type = 'text/javascript';
+		            s.async = true;
+		            s.src = 'https://widget.intercom.io/widget/phujgqav';
+		            var x = d.getElementsByTagName('script')[0];
+		            x.parentNode.insertBefore(s, x);
+		        }
+		        if (w.attachEvent) {
+		            w.attachEvent('onload', l);
+		        } else {
+		            w.addEventListener('load', l, false);
+		        }
+		    }
+		})()
+		</script>
+
+		
+		<script type="text/javascript">
+			var token = "6b636f61624937755634657a73786f44305132536c6b50386f596a4478743177";
+
+			jQuery(document).bind('ajaxSend', function(event, xhr, params) {
+				xhr.setRequestHeader('CSRF-Token', token);
+
+				//console.log(params);
+				console.log(xhr);
+			});
+		</script>
+
+				<!-- HS -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$(".contact_gadjian").click(function(){
+					Intercom('showNewMessage');
+				});
+
+				$('input[name="menfav"]').change(function(){
+					if($(this).prop('checked')  == true){
+						update_menu_fav($(this).val());
+					}else {
+						delete_menu_fav($(this).val());
+						$('input[name="menfav"]').attr('disabled',false);
+						$('input[name="menfav"]').each(function(){
+		                    $(this).parent().removeClass('menu_nav_disable');
+		                });
+					}
+				});
+				$('input[name="menfav"]').change(function(){
+				    if($(this).prop('checked')){
+				        $(this).parent().addClass('menu_fav_terpilih');
+				    }else{
+				        $(this).parent().removeClass('menu_fav_terpilih');
+				    }
+				});
+				$("body").on("click",".choose-menu-fav",function(){
+					$('.menu_fav').slideToggle();
+					$('.navbar').toggleClass("softShadow");
+				});
+				$(".close-menu-fav").click(function(){
+					$('.menu_fav').slideUp();
+					$('.navbar').toggleClass("softShadow");
+				});
+
+
+				function update_menu_fav(value) {
+					$.ajax({
+		                type: "POST",
+		                url: '/menufav/ajax-update',
+		                data: {id_menuser : value},
+		                success: function(data){
+		                    showMenuFav();
+		                    if(data=='full'){
+		                    	$('input[name="menfav"]').attr('disabled',true);
+		                    	$('input[name="menfav"]').each(function(){
+		                    		$(this).parent().addClass('menu_nav_disable');
+
+		                    	});
+		                    	$('input[name="menfav"]:checked').each(function() {
+								   	$(this).attr('disabled',false);
+								   	$(this).parent().removeClass('menu_nav_disable');
+
+								});
+		                    }
+		                }
+		            });
+				}
+				function delete_menu_fav(value) {
+					$.ajax({
+		                type: "POST",
+		                url: '/menufav/ajax-delete',
+		                data: {id_menuser : value},
+		                success: function(data){
+		                    showMenuFav();
+		                }
+		            });
+				}
+				function showMenuFav(){
+					$.ajax({
+		                type: "GET",
+		                url: '/menufav/ajax-show-menu',
+		                data: {},
+		                success: function(data){
+		                    $('.show_menu_fav').html(data);
+		                    $('[data-toggle="tooltip"]').tooltip();
+		                }
+		            });
+				}
+
+				/*var ul = document.getElementById("favoriteList");
+				var li = ul.getElementsByTagName("li");
+				var numItems = li.length;
+				var css = document.createElement("style");
+				css.type = "text/css";
+				css.innerHTML = "#navbar>ul.nav:nth-child(1) { column-count: " + Math.round(numItems/2) + "; }";
+				document.body.appendChild(css);*/
+			});
+
+
+		</script>
+
+		<script type="text/javascript">
+			$( document ).ajaxError(function( event, request, settings ) {
+				var responseText = jQuery.parseJSON(request.responseText);
+				$("#jengkiError").find("div").html(responseText.msg);
+
+				$('#jengkiError').css({"display":"block","opacity":"0","left":"30px","bottom":"-50px"}).animate({opacity: 1,bottom : "10px"}, 1313);
+				$('#jengkiError').click(function(){
+					$(this).animate({opacity: 0,left : "-40px"}, 313, function(){
+						$(this).css({"display":"none"});
+
+						$("#jengkiError").find("div").html("Ada inputan yang salah/belum diisi.");
+					});
+				});
+			});
+		</script>
+
+		<script type="text/javascript">
+			
+			// remove class
+			$(document).ready(function(){
+				var seminggu = false;
+				if (seminggu) {
+					$('.new-menu').removeClass('new-menu');
+				    $('.label-new-menu').remove();
+				}
+			});
+		</script>
+	</body>
+</html>

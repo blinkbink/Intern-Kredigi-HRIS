@@ -1,0 +1,26 @@
+.calendar
+{
+    font-family: Arial; font-size: 1px;
+}
+table.calendar
+{
+    margin: auto; border-collapse: collapse;
+}
+.calendar .days td
+{
+    width: 7px;
+    height:5px;
+    padding:1px;
+    border: 1px solid #999;
+    vertical-align: top;
+    background-color: aliceblue;;
+}
+.calendar .days td:hover
+{
+    background-color: lightskyblue;;
+}
+.calendar .highlight
+{
+    font-weight:bold;
+    color: white;
+}

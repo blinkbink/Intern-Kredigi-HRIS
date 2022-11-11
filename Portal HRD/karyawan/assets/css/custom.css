@@ -1,0 +1,88 @@
+
+.ui-datepicker {
+  width: 100%;
+  padding: .2em .2em 0;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+    display: block;
+    padding: .8em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.ui-datepicker th {
+    padding: .8em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+    font-size: 1.2em;
+}
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+    font-size: 1.5em
+}
+table.ui-datepicker-calendar tbody tr td.ui-datepicker-other-month {
+    opacity: .35;
+    filter: Alpha(Opacity=35);
+    background-image: none;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 0;
+    width: 3em;
+    height: 3em;
+}
+.ui-datepicker-next {
+    display:block;
+}
+
+.ui-datepicker-prev {
+    display:block;
+}
+#userMenuHome .statistikAkun{
+    padding-bottom:20px;
+}
+.legendContainer{
+    text-align:center;
+    padding-top:20px;
+}
+#js-legend{
+    display:inline-block;
+    margin:auto !important;
+}
+
+#adminMenu a,
+#js-legend ul,
+#userMenuHome a,
+.p-l-sm {
+    padding-left: 10px
+}
+
+.chart-legend li,
+.table_display {
+    display: table!important
+}
+
+.chart-legend li span,
+.table_cell {
+    display: table-cell
+}
+.chart-legend li .warna {
+    margin-right: 5px;
+}
+
+#summaryAbsensi .warna, .chart-legend li .warna {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+.navWeekRange {
+    width: 185px !important;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

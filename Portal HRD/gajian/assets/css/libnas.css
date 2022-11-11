@@ -1,0 +1,248 @@
+
+
+
+/* Resize icon akhir pekan */
+.icon-akhirpekan {
+  font-size:1.2em;
+}
+
+.row-alert div {
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+}
+.row-alert a:hover {
+  text-decoration: none;
+}
+
+.libnas-ref {
+  font-size:0.8em;
+}
+
+.libnas-ref a {
+  text-decoration: none;
+}
+.libnas-ref a:hover{
+  text-decoration: none;
+}
+
+a .libnas-nav-inactive {
+  background-color: #EEE;
+}
+
+.event-article {
+  padding-left:2em;
+  padding-right: 2em;
+}
+
+/* To center the full calendar holiday details (at the footer) */
+table.libnas-calendar-full-detail {
+  margin-right: auto;
+  margin-left:auto;
+  font-size:0.9em;
+  font-color:#AAA;
+}
+
+/* To set font color of Sunday and Friday at the header */
+table.ui-datepicker-calendar thead tr th.ui-datepicker-week-end:nth-child(1) {
+  color: red !important;
+}
+table.ui-datepicker-calendar thead tr th:nth-child(6) {
+  color: green !important;
+}
+
+
+
+/* To set font color of weekend to red in datepicker */
+table.ui-datepicker-calendar tbody tr td.ui-datepicker-week-end:nth-child(1) span {
+    color: red !important;
+}
+/* To set font color of friday to green in datepicker */
+table.ui-datepicker-calendar tbody tr td:nth-child(6) span {
+    color: green !important;
+}
+
+/* To change datepicker size */
+div.ui-datepicker {
+  font-size: 0.8em;
+}
+
+/* To set font and cell background color of holiday in holiday datepicker*/
+.day-event a {
+    background-color: #BC2326 !important;
+    background-image :none !important;
+    color: #ffffff !important;
+}
+
+.event-color-red a {
+  background-color: #BC2326 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-red {
+  background-color: #BC2326;
+  background-image :none;
+  color: #ffffff;  
+}
+
+.event-color-pink a {
+  background-color: #FAAFBE !important;
+  background-image :none !important;
+  color: #000 !important;
+}
+.legend-color-pink {
+  background-color: #FAAFBE;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-orange a {
+  background-color: #FFA500 !important;
+  background-image :none !important;
+  color: #000 !important;
+}
+.legend-color-orange {
+  background-color: #FFA500;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-yellow a {
+  background-color: #FFFF99 !important;
+  background-image :none !important;
+  color: #000 !important;
+}
+.legend-color-yellow {
+  background-color: #FFFF99;
+  background-image :none;
+  color: #000;  
+}
+
+
+.event-color-brown a {
+  background-color: #7F5217 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-brown {
+  background-color: #7F5217;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-gray a {
+  background-color: #C0C0C0 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-gray {
+  background-color: #C0C0C0;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-purple a {
+  background-color: #800080 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-purple {
+  background-color: #800080;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-blue a {
+  background-color: #659EC7 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-blue {
+  background-color: #659EC7;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-green a {
+  background-color: #B2C248 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-green {
+  background-color: #B2C248;
+  background-image :none;
+  color: #000;  
+}
+
+.event-color-darkgreen a {
+  background-color: #008000 !important;
+  background-image :none !important;
+  color: #ffffff !important;
+}
+.legend-color-darkgreen {
+  background-color: #008000;
+  background-image :none;
+  color: #000;  
+}
+
+/* To fix the coloring after disabling datepicker input */
+table.ui-datepicker-calendar tbody tr td.day-normal {
+  opacity:0.8;
+}
+.day-normal span {
+    background-color: #F6f6f6 !important;
+    background-image :none !important;
+    color: #000000 !important;  
+}
+
+.row-content {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.row-logo {
+  padding-left:0.2em;
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+  padding-right:0.2em;
+  font-size: 4.4em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.row-alert {
+  padding-top:0em;
+  padding-bottom:0em;
+  padding-left:2em;
+  padding-right:2em;
+  font-size:1em;
+}
+
+.row-detail {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.libnas-calendar-month {
+  display:inline-block;
+}
+
+table.libnas-table-holiday {
+  margin-left:auto; 
+  margin-right:auto;
+}
+table.libnas-table-holiday td {
+  text-align:left;
+}
+
+
+.libnas-content {
+  padding-left:2em;
+  padding-right:2em;
+}
+
+.libnas-holiday-calendar-img {
+  height : 5em;
+  padding-left:0em;
+  padding-right:1em;
+  padding-top:1em;
+
+}
